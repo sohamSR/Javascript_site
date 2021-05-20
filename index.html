@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="addNumber(10, 10)" class="btn btn-primary">Add Number 10 and 10</button><br><br>
+    <button onclick="convertMinutesIntoSeconds(1)" class="btn btn-secondary">Convert 1 Minute into seconds</button><br><br>
+    <button onclick="convertAgeIntoSeconds(1)" class="btn btn-success">Convert 1 year into seconds</button><br><br>
+    <button onclick="return1stItemOfArray(array)" class="btn btn-danger">Return 1st item of the items => banana, apples, oranges</button><br><br>
+    <button onclick="badOrGoodMovie(6)" class="btn btn-warning">Return whether the movie is good or bad if rating is 6</button><br><br>
+    <button onclick="isEmptyString('')" class="btn btn-info">Find whether the string "" is emtpty or not</button><br><br>
+    <script>
+      function addNumber(num1, num2)  {
+        alert(num1 + num2)
+      }
+      
+
+      function convertMinutesIntoSeconds(minutes){
+          alert(minutes * 60)
+      }
+      
+
+      function convertAgeIntoSeconds(yrs){
+          alert(yrs * 12 * 30 * 24 * 60 * 60)
+      }
+      
+
+      function return1stItemOfArray(array){
+        alert(array[0])
+      }
+
+      let array = [
+          'banana', 
+          'oranges', 
+          'apples'
+    ]  
+      
+
+    function badOrGoodMovie(movie_rating){
+        let movie_result;
+        
+        if (movie_rating <= 6){
+            movie_result = "BAD MOVIE"
+        }
+        else {
+            movie_result = "GOOD MOVIE"
+        }
+
+        alert(movie_result)
+    }
+    
+
+    function isEmptyString(string){
+        if (string == ""){
+            alert (true)
+        }else{
+            alert (false)
+        }
+    }
+
+    
+
+    function findMin(numbers){
+        let minimum = numbers[0];
+        for (let i = 0; i < numbers.length; i++){
+            if (numbers[i] < minimum){
+                minimum = numbers[i]
+            }
+            return(minimum)
+        }
+    }
+    
+    </script>
+</body>
+</html>
